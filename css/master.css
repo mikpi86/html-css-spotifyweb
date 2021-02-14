@@ -7,6 +7,9 @@
 /* utility */
 body {
     background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -18,14 +21,25 @@ li {
     list-style: none;
 }
 
-/* MAIN NAV */
+a {
+    color: dimgray;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+.title {
+    font-weight: bold;
+    color: white;
+}
+
+/* SIDE NAV */
 .side_nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 300px;
     height: calc(100% - 90px);
-    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -35,22 +49,131 @@ li {
     min-height: 250px;
     justify-content: flex-start;
 }
+    /* side main menu */
 .side_nav_menu_container > .side_main_menu {
     width: 100%;
-    height: 170px;
+    height: 220px;
 }
+.side_main_menu > #logo_small {
+    margin-top: 10px;
+    width: 70%
+}
+.side_main_menu > #logo_big {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+}
+
+.side_main_menu > .main_menu {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;   
+}
+.side_main_menu > .main_menu.hidden-xs li {
+    border-left: 5px solid black;
+    padding-left: 15px;
+}
+.side_main_menu > .main_menu.hidden-xs li:first-child {
+    border-left: 5px solid rgb(50, 247, 50);
+    padding-left: 15px;
+}
+
+.side_main_menu > ul a {
+    display: flex;
+    flex-direction: row;
+}
+.side_main_menu > ul svg {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    fill:  rgb(187, 187, 187);
+}
+.side_main_menu > ul a:hover svg {
+    fill: white;
+}
+.side_main_menu > ul h4 {
+    margin-left: 10px;
+    align-self: baseline;
+}
+    /* playlist menu */
 .side_nav_menu_container > .playlist_menu {
     width: 100%;
-    height: calc(100% - 170px);
+    height: calc(100% - 220px);
+    padding-left: 20px;
     justify-content: center;
     overflow-y: scroll;
 }
+.playlist_menu.hidden-xs > .add_new_container > a {
+    display: flex;
+    flex-direction: row;
+}
+.add_new_square {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(187, 187, 187);
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: black;
+}
+.playlist_menu.hidden-xs p {
+    align-self: center;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.playlist_menu.hidden-xs > .add_new_container > a:hover .add_new_square{
+    background-color: white;
+}
 
+.playlist_list li {
+    margin: 10px 0;
+}
+    /* gestione utente */
 .gestione_utente {
     width: 100%;
     min-height: 90px;
+    padding: 10px;
     justify-content: flex-end;
 }
+.gestione_utente > .app_installer {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid dimgray;
+}
+.gestione_utente > .app_installer > a{
+    display: flex;
+    align-items: center;
+}
+.gestione_utente > .app_installer svg {
+    width: 20px;
+    margin-right: 10px;
+    stroke: rgb(187, 187, 187);
+}
+.gestione_utente > .app_installer a:hover svg {
+    stroke: white;
+}
+.gestione_utente > .profile {
+    padding: 10px 10px 0;
+}
+.gestione_utente > .profile > a {
+    display: flex;
+}
+.gestione_utente > .profile .profile_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(187, 187, 187);
+    background-image: url('../img/profile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+.gestione_utente > .profile #profile_Name {
+    margin-left: 10px;
+    align-self: center;
+}
+
 
 /* MAIN CONTENT */
 .main_content_box {
@@ -58,6 +181,7 @@ li {
     height: calc(100% - 90px);
     margin-left: 300px;
     padding-bottom: 90px;
+    background-color: rgba(20,25,34,255);
 }
 
 .main_content_box > .overlay {
@@ -66,6 +190,7 @@ li {
     position: fixed;
     top: 0;
     left: 300px;
+    background-color: rgba(102, 100, 110, 0.5);
 }
 
 .main_content_box > .main_content {
@@ -130,9 +255,38 @@ footer {
 
 /* SMARTPHONE */
 @media screen and (max-width:767px) {
+    /* side nav */
     .side_nav {
         width: 60px;
     }
+    .side_main_menu {
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .side_main_menu > .main_menu.visible-xs a {
+        margin-bottom: 10px;
+    }
+    
+    .gestione_utente > .app_installer {
+        padding: 0;
+    }
+    .gestione_utente > .app_installer,
+    .gestione_utente > .profile {
+        display: flex;
+        justify-content: center;
+    }
+    .gestione_utente > .app_installer svg {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .gestione_utente > .profile {
+        padding: 0;
+        margin-top: 10px;
+    }
+    
+    /* main */
     .main_content_box {
         width: calc(100% - 60px);
         margin-left: 60px;
@@ -148,35 +302,32 @@ footer {
 }
 
 /* debug */
-.ms_debug .wrapper {
+/* .ms_debug .wrapper {
     background-color: red;
-}
-.ms_debug .side_nav {
+} */
+/* .ms_debug .side_nav {
     background-color: blue;
-}
-.ms_debug .side_nav_menu_container {
+} */
+/* .ms_debug .side_nav_menu_container {
     background-color: darkolivegreen;
-}
-.ms_debug .side_nav_menu_container > .side_main_menu {
+} */
+/* .ms_debug .side_nav_menu_container > .side_main_menu {
     background-color: cornflowerblue;
-}
-.ms_debug .side_nav_menu_container > .playlist_menu {
+} */
+/* .ms_debug .side_nav_menu_container > .playlist_menu {
     background-color: rgb(129, 230, 183);
-}
-.ms_debug .side_nav > .gestione_utente {
+} */
+/* .ms_debug .side_nav > .gestione_utente {
     background-color: rgb(11, 202, 202);
-}
-.ms_debug .main_content_box {
+} */
+/* .ms_debug .main_content_box {
     background-color: yellow;
-}
+} */
 .ms_debug footer {
     background-color: pink;
 }
 .ms_debug .player.container-fluid > .row > .col-xs-4 {
     border: 1px solid black;
-}
-.ms_debug .overlay {
-    background-color: rgba(255, 255, 255, 0.8);
 }
 .content_nav > .content_nav_item {
     border: 1px solid black;
@@ -196,3 +347,4 @@ footer {
     border-radius: 50%;
     background-color: darkslateblue;
 }
+
