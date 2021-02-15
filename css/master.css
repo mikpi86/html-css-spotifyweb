@@ -129,6 +129,9 @@ h2 {
 .playlist_menu.ms_hidden_xs > .add_new_container > a:hover .add_new_square{
     background-color: white;
 }
+.playlist_menu.ms_hidden_xs > .add_new_container > a:hover p {
+    color: white;
+}
 
 .playlist_list li {
     margin: 10px 0;
@@ -223,7 +226,7 @@ h2 {
 
 .main_content_box > .main_content {
     padding-top: 90px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 .main_content > .content_nav {
     text-align: center;
@@ -249,14 +252,14 @@ h2 {
 }
 
 section img {
-    max-width: 145px;
-    max-height: 145px;
+    max-width: 130px;
+    max-height: 130px;
     margin-right: 10px;
     margin-bottom: 10px;
 }
 section img.round_shape {
-    width: 145px;
-    height: 145px;
+    width: 130px;
+    height: 130px;
     margin-right: 10px;
     border-radius: 50%;
 }
@@ -267,7 +270,7 @@ section img.round_shape {
     flex-direction: column;
 }
 .info_album {
-    max-width: 145px;
+    max-width: 130px;
 }
 section h5 {
     font-size: 0.8em;
@@ -278,7 +281,6 @@ section h5 {
 section p {
     font-size: 0.8em;
     color: rgb(139, 139, 139);
-
     align-self: center;
 }
 
@@ -371,6 +373,9 @@ footer {
     .main_content_box {
         width: calc(100% - 60px);
         margin-left: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
     .main_content_box > .overlay {
         width: calc(100% - 60px);
@@ -379,8 +384,29 @@ footer {
         top: 0;
         left: 60px;
     }
+    section#recently_played img,
+    section#created_for img,
+    section#populars img {
+        max-width: 190px;
+        max-height: 190px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    section#recently_played img.round_shape,
+    section#created_for img.round_shape,
+    section#populars img.round_shape {
+        width: 190px;
+        height: 190px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    .info_album {
+        max-width: 190px;
+    }
 }
-/* TABLET */
+
+/* NAVBAR DA TABLET IN SU */
 @media screen and (min-width: 600px) {
     /* side nav */
     .ms_hidden_sm {
@@ -388,6 +414,53 @@ footer {
     }
     .side_main_menu > .main_menu {
         margin-top: 0;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    section#recently_played img,
+    section#created_for img,
+    section#populars img {
+        max-width: 190px;
+        max-height: 190px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    section#recently_played img.round_shape,
+    section#created_for img.round_shape,
+    section#populars img.round_shape {
+        width: 190px;
+        height: 190px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    .info_album {
+        max-width: 190px;
+    }
+}
+/* DESKTOP MD */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    section#recently_played img,
+    section#created_for img,
+    section#populars img {
+        max-width: 140px;
+        max-height: 140px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    section#recently_played img.round_shape,
+    section#created_for img.round_shape,
+    section#populars img.round_shape {
+        width: 140px;
+        height: 140px;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+
+    .info_album {
+        max-width: 140px;
     }
 }
 
