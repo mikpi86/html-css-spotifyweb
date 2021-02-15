@@ -283,6 +283,48 @@ section p {
     color: rgb(139, 139, 139);
     align-self: center;
 }
+    /* overlay degli element */
+#recently_played > .ms_row > li > a > .element,
+#created_for > .ms_row > li > a > .element,
+#populars > .ms_row > li > a > .element {
+  position: relative;
+}
+#recently_played > .ms_row > li > a > .element:hover .ms_hover_green,
+#created_for > .ms_row > li > a > .element:hover .ms_hover_green,
+#populars > .ms_row > li > a > .element:hover .ms_hover_green {
+  display: block;
+}
+#recently_played > .ms_row > li > a > .element > img,
+#created_for > .ms_row > li > a > .element > img,
+#populars > .ms_row > li > a > .element > img {
+  max-width: 130px;
+  max-height: 130px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#recently_played > .ms_row > li > a > .element > .ms_hover_green,
+#created_for > .ms_row > li > a > .element > .ms_hover_green,
+#populars > .ms_row > li > a > .element > .ms_hover_green {
+  width: 130px;
+  height: 130px;
+  background-color: rgba(54, 54, 54, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#populars > .ms_row > li > a > .element > .ms_hover_green {
+    border-radius: 50%;
+}
+.ms_play_icon {
+  font-size: 70px;
+  color: rgb(255,255,255);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+    /* fine overlay degli element */
 
 /* FOOTER */
 footer {
@@ -404,6 +446,20 @@ footer {
     .info_album {
         max-width: 190px;
     }
+
+        /* overlay degli element */
+    #recently_played > .ms_row > li > a > .element > img,
+    #created_for > .ms_row > li > a > .element > img,
+    #populars > .ms_row > li > a > .element > img {
+        max-width: 190px;
+        max-height: 190px;
+    }
+    #recently_played > .ms_row > li > a > .element > .ms_hover_green,
+    #created_for > .ms_row > li > a > .element > .ms_hover_green,
+    #populars > .ms_row > li > a > .element > .ms_hover_green {
+        width: 190px;
+        height: 190px;
+    }
 }
 
 /* NAVBAR DA TABLET IN SU */
@@ -439,6 +495,20 @@ footer {
     .info_album {
         max-width: 190px;
     }
+
+           /* overlay degli element */
+    #recently_played > .ms_row > li > a > .element > img,
+    #created_for > .ms_row > li > a > .element > img,
+    #populars > .ms_row > li > a > .element > img {
+        max-width: 190px;
+        max-height: 190px;
+    }
+    #recently_played > .ms_row > li > a > .element > .ms_hover_green,
+    #created_for > .ms_row > li > a > .element > .ms_hover_green,
+    #populars > .ms_row > li > a > .element > .ms_hover_green {
+        width: 190px;
+        height: 190px;
+    }
 }
 /* DESKTOP MD */
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -461,6 +531,20 @@ footer {
 
     .info_album {
         max-width: 140px;
+    }
+
+           /* overlay degli element */
+    #recently_played > .ms_row > li > a > .element > img,
+    #created_for > .ms_row > li > a > .element > img,
+    #populars > .ms_row > li > a > .element > img {
+        max-width: 140px;
+        max-height: 140px;
+    }
+    #recently_played > .ms_row > li > a > .element > .ms_hover_green,
+    #created_for > .ms_row > li > a > .element > .ms_hover_green,
+    #populars > .ms_row > li > a > .element > .ms_hover_green {
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -493,3 +577,4 @@ footer {
     border: 1px solid black;
 }
 
+/* prova */
