@@ -58,31 +58,27 @@ h2 {
     min-height: 250px;
     justify-content: flex-start;
 }
-    /* side main menu */
+    /* side main menu - sezione logo */
 .side_nav_menu_container > .side_main_menu {
     width: 100%;
     height: 220px;
-}
-.side_main_menu > #logo_small {
-    margin-top: 10px;
-    width: 70%
 }
 .side_main_menu > #logo_big {
     margin-top: 10px;
     margin-left: 10px;
     width: 150px;
 }
-
+    /* side main menu - sezione menu principale */
 .side_main_menu > .main_menu {
     margin: 30px 0;
     display: flex;
     flex-direction: column;   
 }
-.side_main_menu > .main_menu.hidden-xs li {
+.side_main_menu > .main_menu.ms_hidden_xs li {
     border-left: 5px solid black;
     padding-left: 15px;
 }
-.side_main_menu > .main_menu.hidden-xs li:first-child {
+.side_main_menu > .main_menu.ms_hidden_xs li:first-child {
     border-left: 5px solid rgb(50, 247, 50);
     padding-left: 15px;
 }
@@ -104,7 +100,7 @@ h2 {
     margin-left: 10px;
     align-self: baseline;
 }
-    /* playlist menu */
+    /* side main menu - sezione playlist menu */
 .side_nav_menu_container > .playlist_menu {
     width: 100%;
     height: calc(100% - 220px);
@@ -112,7 +108,7 @@ h2 {
     justify-content: center;
     overflow-y: scroll;
 }
-.playlist_menu.hidden-xs > .add_new_container > a {
+.playlist_menu.ms_hidden_xs > .add_new_container > a {
     display: flex;
     flex-direction: row;
 }
@@ -125,12 +121,12 @@ h2 {
     line-height: 40px;
     color: black;
 }
-.playlist_menu.hidden-xs p {
+.playlist_menu.ms_hidden_xs p {
     align-self: center;
     margin-bottom: 0;
     margin-left: 10px;
 }
-.playlist_menu.hidden-xs > .add_new_container > a:hover .add_new_square{
+.playlist_menu.ms_hidden_xs > .add_new_container > a:hover .add_new_square{
     background-color: white;
 }
 
@@ -299,9 +295,12 @@ footer {
     padding: 10px;
 }
 /* song info */
-#song_info div {
+#song_info > img {
+    width: 50px;
+    height: 50px;
+}
+#song_info > .song_info_text {
     display: inline-block;
-    line-height: 70px;
 }
 /* music player */
 #music_player {
@@ -326,7 +325,7 @@ footer {
 }
 
 /* SMARTPHONE */
-@media screen and (max-width:767px) {
+@media screen and (max-width: 599px) {
     /* side nav */
     .side_nav {
         width: 60px;
@@ -337,7 +336,17 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .side_main_menu > .main_menu.visible-xs a {
+    .ms_visible_xs_inline-block {
+        display: inline-block;
+    }
+    .ms_hidden_xs {
+        display: none;
+    }
+    .side_main_menu > #logo_small {
+        margin: 10px auto 0;
+        width: 70%
+    }
+    .side_main_menu > .main_menu.ms_visible_xs_inline-block a {
         margin-bottom: 10px;
     }
     
@@ -370,9 +379,17 @@ footer {
         top: 0;
         left: 60px;
     }
-    
 }
-
+/* TABLET */
+@media screen and (min-width: 600px) {
+    /* side nav */
+    .ms_hidden_sm {
+        display: none;
+    }
+    .side_main_menu > .main_menu {
+        margin-top: 0;
+    }
+}
 
 /* SCROLLBAR */
 /* la seguente scrollbar è stata generata al link https://w3generator.com/scrollbar per un effetto più simile agli screenshot forniti */
@@ -402,5 +419,4 @@ footer {
 .ms_debug .player.container-fluid > .row > .col-xs-4 {
     border: 1px solid black;
 }
-
 
