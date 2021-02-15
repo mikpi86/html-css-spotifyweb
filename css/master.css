@@ -6,11 +6,11 @@
 
 /* utility */
 body {
-    background-color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: bold;
     color: rgb(139, 139, 139);
+    background-color: rgb(20,25,34);
 }
 
 .wrapper {
@@ -50,6 +50,7 @@ h2 {
     height: calc(100% - 90px);
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 .side_nav_menu_container {
     width: 100%;
@@ -186,19 +187,43 @@ h2 {
 /* MAIN CONTENT */
 .main_content_box {
     width: calc(100% - 300px);
-    margin-left: 300px;
+    height: 100%;
     padding-bottom: 90px;
-    background-color: rgba(20,25,34,255);
+    position: fixed;
+    top: 0;
+    left: 300px;
+    overflow-y: scroll;
 }
 
+    /* gestione overlay */
 .main_content_box > .overlay {
     width: 100%;
     height: 90px;
     position: fixed;
     top: 0;
     left: 300px;
-    background-color: rgba(102, 100, 110, 0.5);
+    background-color: rgba(48, 47, 50, 0.53);
 }
+.main_content_box > .overlay > .upgrade_button {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid rgb(146, 146, 152);
+    border-radius: 40px;
+    color: rgb(195, 195, 199);
+    font-size: smaller;
+    position: fixed;
+    top: 23px;
+    right: 25px;
+}
+.main_content_box > .overlay > .upgrade_button:hover {
+    display: inline-block;
+    padding: 10px 40px;  
+    font-size: 1em;
+    position: fixed;
+    top: 21px;
+    right: 28px;
+}
+    /* fine gestione overlay */
 
 .main_content_box > .main_content {
     padding-top: 90px;
@@ -210,6 +235,12 @@ h2 {
 .main_content > .content_nav > .content_nav_item {
     display: inline-block;
     margin: 10px;
+}
+.content_nav_item > .horizontal_green_bar {
+    width: 40px;
+    border: 2px solid rgb(50, 247, 50);
+    background-color: rgb(50, 247, 50);
+    margin: 0 auto;
 }
 
 .main_content_box > .main_content section {
@@ -238,6 +269,9 @@ section img.round_shape {
 #created_for > .ms_row div {
     display: flex;
     flex-direction: column;
+}
+.info_album {
+    max-width: 145px;
 }
 section h5 {
     font-size: 0.8em;
@@ -339,6 +373,27 @@ footer {
     
 }
 
+
+/* SCROLLBAR */
+/* la seguente scrollbar è stata generata al link https://w3generator.com/scrollbar per un effetto più simile agli screenshot forniti */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #dcdcdc;
+    border-radius: 10px;
+ box-shadow: inset 7px 10px 12px #f5f5f5;
+}
+
+
+
+
+
 /* debug */
 
 .ms_debug footer {
@@ -347,4 +402,5 @@ footer {
 .ms_debug .player.container-fluid > .row > .col-xs-4 {
     border: 1px solid black;
 }
+
 
