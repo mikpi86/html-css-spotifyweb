@@ -10,6 +10,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: bold;
+    color: rgb(139, 139, 139);
 }
 
 .wrapper {
@@ -22,7 +23,7 @@ li {
 }
 
 a {
-    color: dimgray;
+    color: rgb(139, 139, 139);
 }
 a:hover {
     color: white;
@@ -30,6 +31,13 @@ a:hover {
 }
 .title {
     font-weight: bold;
+    color: white;
+}
+.title_area {
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 1.5em;
     color: white;
 }
 
@@ -178,7 +186,6 @@ a:hover {
 /* MAIN CONTENT */
 .main_content_box {
     width: calc(100% - 300px);
-    height: calc(100% - 90px);
     margin-left: 300px;
     padding-bottom: 90px;
     background-color: rgba(20,25,34,255);
@@ -212,6 +219,37 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+section img {
+    max-width: 145px;
+    max-height: 145px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+section img.round_shape {
+    width: 145px;
+    height: 145px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+#recently_played > .ms_row div,
+#populars > .ms_row div,
+#created_for > .ms_row div {
+    display: flex;
+    flex-direction: column;
+}
+section h5 {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    align-self: center;
+}
+section p {
+    font-size: 0.8em;
+    color: rgb(139, 139, 139);
+
+    align-self: center;
 }
 
 /* FOOTER */
@@ -302,49 +340,11 @@ footer {
 }
 
 /* debug */
-/* .ms_debug .wrapper {
-    background-color: red;
-} */
-/* .ms_debug .side_nav {
-    background-color: blue;
-} */
-/* .ms_debug .side_nav_menu_container {
-    background-color: darkolivegreen;
-} */
-/* .ms_debug .side_nav_menu_container > .side_main_menu {
-    background-color: cornflowerblue;
-} */
-/* .ms_debug .side_nav_menu_container > .playlist_menu {
-    background-color: rgb(129, 230, 183);
-} */
-/* .ms_debug .side_nav > .gestione_utente {
-    background-color: rgb(11, 202, 202);
-} */
-/* .ms_debug .main_content_box {
-    background-color: yellow;
-} */
+
 .ms_debug footer {
     background-color: pink;
 }
 .ms_debug .player.container-fluid > .row > .col-xs-4 {
     border: 1px solid black;
-}
-.content_nav > .content_nav_item {
-    border: 1px solid black;
-}
-
-.square_block {
-    width: 130px;
-    height: 130px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: darkslateblue;
-}
-.round_block {
-    width: 130px;
-    height: 130px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background-color: darkslateblue;
 }
 
