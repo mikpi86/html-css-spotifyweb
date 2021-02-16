@@ -364,9 +364,12 @@ footer {
 #song_info > .song_info_text {
     display: inline-block;
 }
-#song_info > .song_info_text > .Album_Name,
-#song_info > .song_info_text > .Song_Name {
+#song_info > .song_info_text .Album_Name,
+#song_info > .song_info_text .Song_Name {
     display: block;
+}
+#song_info > .song_info_text:hover .Song_Name {
+    text-decoration: underline;
 }
 #song_info > .song_info_icons {
     justify-self: flex-end;
