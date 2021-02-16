@@ -396,18 +396,21 @@ footer {
 }
 #music_player > .player_bar > .grey_player_bar {
     width: 20vw;
-    height: 2px;
+    height: 3px;
     margin: 0 1vw;
     background-color: grey;
     position: relative;
 }
 #music_player > .player_bar > .grey_player_bar > .white_player_bar {
     width: 4vw;
-    height: 2px;
+    height: 3px;
     background-color: white;
     position: absolute;
     top: 0;
     left: 0;
+}
+#music_player > .player_bar:hover .white_player_bar {
+    background-color: rgb(50, 247, 50);
 }
 
     /* volume */
@@ -425,18 +428,40 @@ footer {
 }
 #volume > .grey_volume_bar {
     width: 7vw;
-    height: 2px;
+    height: 3px;
     margin-left: 1vw;
     background-color: grey;
     position: relative;
 }
 #volume > .grey_volume_bar > .white_volume_bar {
     width: 3vw;
-    height: 2px;
+    height: 3px;
     background-color: white;
     position: absolute;
     top: 0;
     left: 0;
+}
+#volume > .grey_volume_bar:hover .white_volume_bar {
+    background-color: rgb(50, 247, 50);
+}
+    /* sfera barre player e volume */
+#music_player > .player_bar:hover .sfera {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -95%;
+    left: 100%;
+}
+#volume > .grey_volume_bar:hover .sfera {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -95%;
+    left: 100%;
 }
 
 /* SMARTPHONE */
@@ -633,15 +658,5 @@ footer {
     background: #dcdcdc;
     border-radius: 10px;
     box-shadow: inset 7px 10px 12px #f5f5f5;
-}
-
-
-
-
-
-/* debug */
-
-.ms_debug .player.container-fluid > .row > .col-xs-4 {
-    border: 1px solid red;
 }
 
