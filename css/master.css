@@ -217,6 +217,7 @@ h2 {
     top: 23px;
     right: 25px;
     z-index: 999;
+    cursor: pointer;
 }
 .main_content_box > .overlay > .upgrade_button:hover {
     display: inline-block;
@@ -226,6 +227,7 @@ h2 {
     top: 21px;
     right: 28px;
     z-index: 999;
+    cursor: pointer;
 }
     /* fine gestione overlay */
 
