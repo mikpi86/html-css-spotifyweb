@@ -203,6 +203,7 @@ h2 {
     position: fixed;
     top: 0;
     left: 300px;
+    z-index: 999;
     background-color: rgba(48, 47, 50, 0.53);
 }
 .main_content_box > .overlay > .upgrade_button {
@@ -215,6 +216,7 @@ h2 {
     position: fixed;
     top: 23px;
     right: 25px;
+    z-index: 999;
 }
 .main_content_box > .overlay > .upgrade_button:hover {
     display: inline-block;
@@ -223,6 +225,7 @@ h2 {
     position: fixed;
     top: 21px;
     right: 28px;
+    z-index: 999;
 }
     /* fine gestione overlay */
 
